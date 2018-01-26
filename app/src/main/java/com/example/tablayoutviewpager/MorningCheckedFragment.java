@@ -31,7 +31,9 @@ public class MorningCheckedFragment extends Fragment {
     private OnItemClickListener mListener = new OnItemClickListener() {
         @Override
         public void onItemClick(View view, int position) {
-            Toast.makeText(mContext, mMorningCheckedChildren.get(position).name + "已刷卡", Toast.LENGTH_SHORT).show();
+            if(!PreventFastClickUtils.isFastClick()) {
+                Toast.makeText(mContext, mMorningCheckedChildren.get(position).name + "已刷卡", Toast.LENGTH_SHORT).show();
+            }
         }
     };
 

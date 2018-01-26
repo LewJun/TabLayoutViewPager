@@ -52,13 +52,13 @@ public class MainActivity extends AppCompatActivity {
     }
 
     private void initMorningCheckedChildren() {
-        for (int i = 0; i < 10; i++) {
+        for (int i = 0; i < 100; i++) {
             mMorningCheckedChildren.add(new Children(i + 1, "张三" + i));
         }
     }
 
     private void initMorningUnCheckChildren() {
-        for (int i = 0; i < 5; i++) {
+        for (int i = 0; i < 150; i++) {
             mMorningUnCheckChildren.add(new Children(i + 1, "李四" + i));
         }
     }

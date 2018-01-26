@@ -31,8 +31,10 @@ public class MorningUnCheckFragment extends Fragment {
     private OnItemClickListener mListener = new OnItemClickListener() {
         @Override
         public void onItemClick(View view, int position) {
-            Toast.makeText(mContext, mMorningUnCheckChildren.get(position).name + "已刷卡", Toast.LENGTH_SHORT).show();
-            ((MainActivity)getActivity()).updateData(position);
+            if(!PreventFastClickUtils.isFastClick()) {
+                Toast.makeText(mContext, mMorningUnCheckChildren.get(position).name + "已刷卡", Toast.LENGTH_SHORT).show();
+                ((MainActivity) getActivity()).updateData(position);
+            }
         }
     };
 
